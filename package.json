@@ -17,10 +17,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "jest --collect-coverage --update-snapshot --no-cache --config=jest.config.ts",
     "eject": "react-scripts eject",
-    "dev": "webpack serve --config ./config/webpack.dev.config.js",
+    "dev-build": "webpack --config ./config/webpack.dev.config.js",
+    "prod-build": "webpack --config ./config/webpack.prod.config.js",
     "mock": "nodemon ./server/server.ts"
   },
   "eslintConfig": {
@@ -53,6 +53,7 @@
     "babel-jest": "^29.7.0",
     "babel-plugin-polyfill-corejs3": "^0.10.4",
     "css-loader": "^7.1.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
     "express": "^4.19.2",
     "html-webpack-plugin": "^5.6.0",
     "jest-environment-jsdom": "^29.7.0",
